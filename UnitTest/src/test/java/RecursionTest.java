@@ -55,6 +55,5 @@ public class RecursionTest {
         double x = -2;
         int n = -2;
         Assertions.assertEquals(ArithmeticException.class, RecursionService.Power(x, n));
-    }
-    
+    } 
 }
