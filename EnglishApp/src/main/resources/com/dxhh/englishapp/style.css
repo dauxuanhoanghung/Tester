@@ -1,0 +1,29 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 9, 2023, 7:29:20 AM
+    Author     : admin
+*/
+
+VBox {
+    -fx-background-color: lightblue;
+    -fx-font-family: Tahoma;
+    -fx-padding: 8;
+    -fx-alignment: CENTER;
+}
+HBox {
+    -fx-spacing: 8;
+    -fx-padding: 3;
+}
+Label.Subject {
+    -fx-font-size: 30;
+    -fx-text-fill: linear-gradient(from 28.91% 17.5355% to 28.436% 73.9336%, #255cbc 0.0%, #c62de1 100.0%);
+    -fx-stroke: gold;
+    -fx-stroke-width: 5;
+}
+Button {
+    -fx-cursor: hand;
+    -fx-text-alignment: center;
+}
