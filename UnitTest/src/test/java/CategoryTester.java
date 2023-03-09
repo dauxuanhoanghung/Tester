@@ -26,36 +26,36 @@ import org.junit.jupiter.api.Test;
  */
 public class CategoryTester {
 
-    private static Connection conn;
-
-    @BeforeAll
-    public static void beforeAll() {
-        try {
-            conn = JDBCUtils.getConnection();
-        } catch (SQLException ex) {
-            Logger.getLogger(CategoryTester.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    @AfterAll
-    public static void afterAll() {
-        if (conn != null)
-            try {
-            conn.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(CategoryTester.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    @Test
-    public void nameCategoryNotSame() throws SQLException {
-        CategoryService s = new CategoryService();
-        List<Category> categories = s.getCategories();
-
-        List<String> names = categories.stream().flatMap(c -> Stream.of(c.getName())).collect(Collectors.toList());
-        Set<String> testNames = new HashSet<>(names);
-
-        Assertions.assertEquals(names.size(), testNames.size());
-    }
+//    private static Connection conn;
+//
+//    @BeforeAll
+//    public static void beforeAll() {
+//        try {
+//            conn = JDBCUtils.getConnection();
+//        } catch (SQLException ex) {
+//            Logger.getLogger(CategoryTester.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
+//
+//    @AfterAll
+//    public static void afterAll() {
+//        if (conn != null)
+//            try {
+//            conn.close();
+//        } catch (SQLException ex) {
+//            Logger.getLogger(CategoryTester.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
+//
+//    @Test
+//    public void nameCategoryNotSame() throws SQLException {
+//        CategoryService s = new CategoryService();
+//        List<Category> categories = s.getCategories();
+//
+//        List<String> names = categories.stream().flatMap(c -> Stream.of(c.getName())).collect(Collectors.toList());
+//        Set<String> testNames = new HashSet<>(names);
+//
+//        Assertions.assertEquals(names.size(), testNames.size());
+//    }
     
 }

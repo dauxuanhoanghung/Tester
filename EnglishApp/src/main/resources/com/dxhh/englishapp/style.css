@@ -16,6 +16,32 @@ VBox {
 HBox {
     -fx-spacing: 8;
     -fx-padding: 3;
+    -fx-vertical-alignment: CENTER;
+}
+HBox RadioButton {
+    -fx-margin-top: 5;
+    -fx-background-color: transparent;
+    -fx-font-weight: Bold;
+    -fx-text-vertical-alignment: Bottom;
+}
+HBox RadioButton .radio {
+    
+    -fx-background-color: #ffffff;
+    -fx-border-color: #666666;
+    -fx-border-width: 2px;
+    -fx-border-radius: 50%;
+    -fx-padding: 4px;
+}
+HBox RadioButton:selected .radio {
+    -fx-background-color: #666666;
+    -fx-border-color: #d2d2d2;
+}
+HBox TextField {
+    -fx-pref-width: 220;
+    -fx-background-color: #f2f2f2;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
 }
 Label.Subject {
     -fx-font-size: 30;
@@ -26,4 +52,14 @@ Label.Subject {
 Button {
     -fx-cursor: hand;
     -fx-text-alignment: center;
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f1f1f1);
+    -fx-background-radius: 20;
+    -fx-background-insets: 0;
+    -fx-text-fill: black;
+    -fx-font-size: 13;
+    -fx-padding: 6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 1);
+}
+Button:hover {
+    -fx-background-color: linear-gradient(#ffffff, #8c8c8c);
 }

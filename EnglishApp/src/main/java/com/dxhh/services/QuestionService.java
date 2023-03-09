@@ -13,8 +13,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -47,16 +45,16 @@ public class QuestionService {
         }
     }
 
-//    public List<Question> getQuestions() throws SQLException {
-//        try (Connection conn = JDBCUtils.getConnection()) {
-//            List<Question> questions = new ArrayList<>();
-//            Statement stm = conn.createStatement();
-//            ResultSet rs = stm.executeQuery("SELECT * FROM question");
-//            while (rs.next()) {
-//                Question q = new Question(rs.getString("id"), rs.getString("content"), rs.getLong("category_id"));
-//                questions.add(q);
-//            }
-//            return questions;
-//        }
-//    }
+    public List<Question> getQuestions() throws SQLException {
+        try (Connection conn = JDBCUtils.getConnection()) {
+            List<Question> questions = new ArrayList<>();
+            Statement stm = conn.createStatement();
+            ResultSet rs = stm.executeQuery("SELECT * FROM question");
+            while (rs.next()) {
+                Question q = new Question(rs.getString("id"), rs.getString("content"), rs.getLong("category_id"));
+                questions.add(q);
+            }
+            return questions;
+        }
+    }
 }
